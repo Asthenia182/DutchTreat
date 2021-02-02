@@ -9,4 +9,4 @@ button.addEventListener("click", function () {
 });
 
 var productInfo = document.getElementsByClassName("product-props");
-var listItems = productInfo.item[0].children;
+var listItems = productInfo.item(0).children;
