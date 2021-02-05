@@ -13,8 +13,8 @@ namespace DutchTreat.Data
 
         IEnumerable<Product> GetProductsByCategory(string category);
 
-        Order GetOrderById(int id);
+        Order GetOrderById(string userName, int id);
 
-        IEnumerable<Order> GetAllOrders(bool includeItems);
+        IEnumerable<Order> GetAllOrdersByUser(string userName, bool includeItems = true);
     }
 }

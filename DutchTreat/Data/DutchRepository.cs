@@ -22,10 +22,11 @@ namespace DutchTreat.Data
             context.Add(model);
         }
 
-        public IEnumerable<Order> GetAllOrders(bool includeItems = true)
+        public IEnumerable<Order> GetAllOrdersByUser(string userName, bool includeItems = true)
         {
             return includeItems
                 ? context.Orders
+                    .Where(x=>x.User.UserName == userName)
                     .Include(x => x.Items)
                     .ThenInclude(x => x.Product)
                     .ToList()
@@ -49,12 +50,12 @@ namespace DutchTreat.Data
             }
         }
 
-        public Order GetOrderById(int id)
+        public Order GetOrderById(string userName, int id)
         {
             return context.Orders
                 .Include(x => x.Items)
                 .ThenInclude(x => x.Product)
-                .Where(x => x.Id == id)
+                .Where(x => x.Id == id && x.User.UserName == userName)
                 .FirstOrDefault();
         }
 
