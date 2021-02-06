@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
-/***/ 2:
+/***/ 1:
 /*!**************************************!*\
   !*** multi ./ClientApp/polyfills.ts ***!
   \**************************************/
@@ -3034,5 +3034,5 @@ Zone.__load_patch('PromiseRejectionEvent', (global, Zone) => {
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[1,"runtime"]]]);
 //# sourceMappingURL=polyfills-es2015.js.map

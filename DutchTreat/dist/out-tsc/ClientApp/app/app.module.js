@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductList } from './shop/productList.component';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     NgModule({
         declarations: [
-            AppComponent
+            AppComponent,
+            ProductList
         ],
         imports: [
             BrowserModule,

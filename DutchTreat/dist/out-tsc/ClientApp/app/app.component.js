@@ -2,22 +2,13 @@ import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'DutchTreat';
+        this.title = 'Product list';
     }
 };
 AppComponent = __decorate([
     Component({
         selector: 'the-shop',
-        template: `
-    
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>
-    </div>
-
-    <router-outlet></router-outlet>
-  `,
+        templateUrl: "./app.component.html",
         styles: []
     })
 ], AppComponent);
