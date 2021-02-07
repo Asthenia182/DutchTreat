@@ -57,8 +57,8 @@ namespace DutchTreat.Controllers
                         config["Tokens:Issuer"],
                         config["Tokens:Audience"],
                         claims,
-                        expires:DateTime.UtcNow.AddMinutes(30),
-                        signingCredentials:creds
+                        expires: DateTime.UtcNow.AddMinutes(30),
+                        signingCredentials: creds
                         );
 
                     var results = new
@@ -66,9 +66,10 @@ namespace DutchTreat.Controllers
                         token = new JwtSecurityTokenHandler().WriteToken(token),
                         expiration = token.ValidTo
                     };
-                }
-            }
 
+                    return Created("", results);
+                }                           
+            }
             return BadRequest();
         }
 

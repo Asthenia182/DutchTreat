@@ -22,6 +22,17 @@ namespace DutchTreat.Data
             context.Add(model);
         }
 
+        public void AddOrder(Order newOrder)
+        {
+            foreach (var item in newOrder.Items)
+            {
+                item.Product = context.Products.Find(item.Product.Id);
+
+            }
+
+            AddEntity(newOrder);
+        }
+
         public IEnumerable<Order> GetAllOrdersByUser(string userName, bool includeItems = true)
         {
             return includeItems
